@@ -1,7 +1,18 @@
 :root{
     --black: #000000;
-    --gray: #3C3C43;
-    --border-gray: rgb(60, 60, 67,0.5);
+    --grey: #3C3C43;
+    --border-grey: rgb(60, 60, 67,0.5);
+    --blue:rgb(14, 24, 95);
+    --primary-blue:rgb(0, 114, 227);
+    --primary-blue-hover:rgb(0, 114, 227,0.5);
+    --buttons-background: rgb(14, 24, 95,0.05);
+    --buttons-background-hover: rgb(14, 24, 95,0.3);
+    --white:#ffffff;
+    --existing-number:#000000;
+    --selected-cell:rgb(0, 114, 227,0.5);
+    --column-row:rgb(0, 114, 227,0.1);
+    --incorrect-number-color: #c22020;
+    --new-correct-number:rgb(0, 114, 227);
 }
 
 body{
@@ -28,13 +39,14 @@ table{
     margin: auto;
     border: 4px solid #000000;
     font-weight:400;
-    color: grey;
+    font-size: xx-large;
+    color: var(--border-grey);
 }
 
 td{
     width: 60px;
     height: 60px;
-    border: 1px solid var(--border-gray);
+    border: 1px solid var(--border-grey);
 }
 
 .cornerLeftTop{
@@ -98,17 +110,21 @@ td{
 
 .numbers button{
     padding: 10px;
-    font-size: larger;
-    border-radius: 8%;
+    font-size: x-large;
+    border-radius: 8px;
     border: none;
+    color: var(--blue);
+    background-color: var(--buttons-background);
 }
 
 .numbers #NewGame{
     width: 250px;
     border-radius: 5px;
     height: 50px;
-    font-size: large;
+    font-size: larger;
     margin-bottom: 10px;
+    background-color: var(--primary-blue);
+    color: var(--white);
 } 
 
 .commandButtons{
@@ -120,8 +136,19 @@ td{
 .commandButtons #Undo, .commandButtons #Clear{
     width: 48%;
     height: 50px; 
+    font-size: large;
 }
 
 .commandButtons #Clear{
     margin-left: auto;
+}
+
+button:hover{
+    background-color: var(--buttons-background-hover);
+    color: var(--white);
+}
+
+#NewGame:hover{
+    background-color: var(--primary-blue-hover);
+    color: var(--blue);
 }
