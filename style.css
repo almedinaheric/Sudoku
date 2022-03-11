@@ -1,0 +1,73 @@
+:root{
+    --black: #000000;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    width: 980px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.tableDiv{
+    width: 100%;
+}
+
+td{
+    width: 50px;
+    height: 50px;
+    /* display: table-cell; */
+}
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    border: 3px solid #000000;
+}
+
+.cornerLeftTop{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.cornerRightTop{
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.cornerLeftBottom{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.cornerRightBottom{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.edgeTop{
+    border-top: 1px solid black;
+}
+
+.edgeBottom{
+    border-bottom: 1px solid black;
+}
+
+.edgeRight{
+    border-right: 1px solid black;
+}
+
+.edgeLeft{
+    border-left: 1px solid black;
+}
+
+#cell48{
+    background-color: bisque;
+}

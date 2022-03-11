@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Sudoku</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Welcome to Sudoku</h1>
+        <div class="tableDiv">
+        <table id="SudokuTable">
+            <tbody>
+                <tr id="firstRow">
+                    <td class="cornerLeftTop" id="cell00">1</td>
+                    <td class="edgeTop" id="cell01">2</td>
+                    <td class="cornerRightTop" id="cell02">3</td>
+                    <td class="cornerLeftTop" id="cell03">4</td>
+                    <td class="edgeTop" id="cell04">5</td>
+                    <td class="cornerRightTop" id="cell05">6</td>
+                    <td class="cornerLeftTop" id="cell06">7</td>
+                    <td class="edgeTop" id="cell07">8</td>
+                    <td class="cornerRightTop" id="cell08">9</td>
+                </tr>
+                <tr id="secondRow">
+                    <td class="edgeLeft" id="cell10">1</td>
+                    <td class="center" id="cell11">2</td>
+                    <td class="edgeRight" id="cell12">3</td>
+                    <td class="edgeLeft" id="cell13">4</td>
+                    <td class="center" id="cell14">5</td>
+                    <td class="edgeRight" id="cell15">6</td>
+                    <td class="edgeLeft" id="cell16">7</td>
+                    <td class="center" id="cell17">8</td>
+                    <td class="edgeRight" id="cell18">9</td>
+                </tr>
+                <tr id="thirdRow">
+                    <td class="cornerLeftBottom" id="cell20">1</td>
+                    <td class="edgeBottom" id="cell21">2</td>
+                    <td class="cornerRightBottom" id="cell22">3</td>
+                    <td class="cornerLeftBottom" id="cell23">4</td>
+                    <td class="edgeBottom" id="cell24">5</td>
+                    <td class="cornerRightBottom" id="cell25">6</td>
+                    <td class="cornerLeftBottom" id="cell26">7</td>
+                    <td class="edgeBottom" id="cell27">8</td>
+                    <td class="cornerRightBottom" id="cell28">9</td>
+                </tr>
+                <tr id="fourthRow">
+                    <td class="cornerLeftTop" id="cell30">1</td>
+                    <td class="edgeTop" id="cell31">2</td>
+                    <td class="cornerRightTop" id="cell32">3</td>
+                    <td class="cornerLeftTop" id="cell33">4</td>
+                    <td class="edgeTop" id="cell34">5</td>
+                    <td class="cornerRightTop" id="cell35">6</td>
+                    <td class="cornerLeftTop" id="cell36">7</td>
+                    <td class="edgeTop" id="cell37">8</td>
+                    <td class="cornerRightTop" id="cell38">9</td>
+                </tr>
+                <tr id="fifthRow">
+                    <td class="edgeLeft" id="cell40">1</td>
+                    <td class="center" id="cell41">2</td>
+                    <td class="edgeRight" id="cell42">3</td>
+                    <td class="edgeLeft" id="cell43">4</td>
+                    <td class="center" id="cell44">5</td>
+                    <td class="edgeRight" id="cell45">6</td>
+                    <td class="edgeLeft" id="cell46">7</td>
+                    <td class="center" id="cell47">8</td>
+                    <td class="edgeRight" id="cell148">9</td>
+                </tr>
+                <tr id="sixthRow">
+                    <td class="cornerLeftBottom" id="cell50">1</td>
+                    <td class="edgeBottom" id="cell51">2</td>
+                    <td class="cornerRightBottom" id="cell52">3</td>
+                    <td class="cornerLeftBottom" id="cell53">4</td>
+                    <td class="edgeBottom" id="cell54">5</td>
+                    <td class="cornerRightBottom" id="cell55">6</td>
+                    <td class="cornerLeftBottom" id="cell56">7</td>
+                    <td class="edgeBottom" id="cell57">8</td>
+                    <td class="cornerRightBottom" id="cell58">9</td>
+                </tr>
+                <tr id="seventhRow">
+                    <td class="cornerLeftTop" id="cell60">1</td>
+                    <td class="edgeTop" id="cell61">2</td>
+                    <td class="cornerRight#zTop" id="cell62">3</td>
+                    <td class="cornerLeftTop" id="cell63">4</td>
+                    <td class="edgeTop" id="cell64">5</td>
+                    <td class="cornerRightTop" id="cell65">6</td>
+                    <td class="cornerLeftTop" id="cell66">7</td>
+                    <td class="edgeTop" id="cell67">8</td>
+                    <td class="cornerRightTop" id="cell68">9</td>
+                </tr>
+                <tr id="eighthRow">
+                    <td class="edgeLeft" id="cell70">1</td>
+                    <td class="center" id="cell71">2</td>
+                    <td class="edgeRight" id="cell72">3</td>
+                    <td class="edgeLeft" id="cell73">4</td>
+                    <td class="center" id="cell74">5</td>
+                    <td class="edgeRight" id="cell75">6</td>
+                    <td class="edgeLeft" id="cell76">7</td>
+                    <td class="center" id="cell77">8</td>
+                    <td class="edgeRight" id="cell78">9</td>
+                </tr>
+                <tr id="ninthRow">
+                    <td class="cornerLeftBottom" id="cell80">1</td>
+                    <td class="edgeBottom" id="cell81">2</td>
+                    <td class="cornerRightBottom" id="cell82">3</td>
+                    <td class="cornerLeftBottom" id="cell83">4</td>
+                    <td class="edgeBottom" id="cell84">5</td>
+                    <td class="cornerRightBottom" id="cell85">6</td>
+                    <td class="cornerLeftBottom" id="cell86">7</td>
+                    <td class="edgeBottom" id="cell87">8</td>
+                    <td class="cornerRightBottom" id="cell88">9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    </div>
+
+</body>
+</html>
