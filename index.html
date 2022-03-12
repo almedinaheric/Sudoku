@@ -16,104 +16,267 @@
         <div class="tableDiv">
             <table id="SudokuTable">
                 <tbody>
+                    <!-- ex - existing , ef - empty field;  c00-b -> cell no/no - blank;  c03-e -> cell no/no - existing-->
                     <tr id="firstRow">
-                        <td class="cornerLeftTop" id="cell00">1</td>
-                        <td class="edgeTop" id="cell01">2</td>
-                        <td class="cornerRightTop" id="cell02">3</td>
-                        <td class="cornerLeftTop" id="cell03">4</td>
-                        <td class="edgeTop" id="cell04">5</td>
-                        <td class="cornerRightTop" id="cell05">6</td>
-                        <td class="cornerLeftTop" id="cell06">7</td>
-                        <td class="edgeTop" id="cell07">8</td>
-                        <td class="cornerRightTop" id="cell08">9</td>
+                        <td class="cornerLeftTop" id="cell00">
+                            <input type="text" maxlength="1" name="ef00" id="c00-b" autocomplete="off">
+                        </td>
+                        <td class="edgeTop" id="cell01">
+                            <input type="text" maxlength="1" name="ef01" id="c01-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightTop" id="cell02">
+                            <input type="text" maxlength="1" name="ef02" id="c02-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftTop" id="cell03">
+                            <input type="text" maxlength="1" name="ex03" id="c03-e" autocomplete="off" disabled value="4">
+                        </td>
+                        <td class="edgeTop" id="cell04">
+                            <input type="text" maxlength="1" name="ex04" id="c04-e" autocomplete="off" disabled value="6">
+                        </td>
+                        <td class="cornerRightTop" id="cell05">
+                            <input type="text" maxlength="1" name="ex05" id="c05-e" autocomplete="off" disabled value="5">
+                        </td>
+                        <td class="cornerLeftTop" id="cell06">
+                            <input type="text" maxlength="1" name="ex06" id="c06-e" autocomplete="off" disabled value="1">
+                        </td>
+                        <td class="edgeTop" id="cell07">
+                            <input type="text" maxlength="1" name="ex07" id="c07-e" autocomplete="off" disabled value="9">
+                        </td>
+                        <td class="cornerRightTop" id="cell08">
+                            <input type="text" maxlength="1" name="ex08" id="c08-e" autocomplete="off" disabled value="3">
+                        </td>
                     </tr>
                     <tr id="secondRow">
-                        <td class="edgeLeft" id="cell10">1</td>
-                        <td class="center" id="cell11">2</td>
-                        <td class="edgeRight" id="cell12">3</td>
-                        <td class="edgeLeft" id="cell13">4</td>
-                        <td class="center" id="cell14">5</td>
-                        <td class="edgeRight" id="cell15">6</td>
-                        <td class="edgeLeft" id="cell16">7</td>
-                        <td class="center" id="cell17">8</td>
-                        <td class="edgeRight" id="cell18">9</td>
+                        <td class="edgeLeft" id="cell10">
+                            <input type="text" maxlength="1" name="ef10" id="c10-b" autocomplete="off">
+                        </td>
+                        <td class="center" id="cell11">
+                            <input type="text" maxlength="1" name="ef11" id="c11-e" autocomplete="off" disabled value="3">
+                        </td>
+                        <td class="edgeRight" id="cell12">
+                            <input type="text" maxlength="1" name="ef12" id="c12-e" autocomplete="off" disabled value="1">
+                        </td>
+                        <td class="edgeLeft" id="cell13">
+                            <input type="text" maxlength="1" name="ef13" id="c13-b" autocomplete="off">
+                        </td>
+                        <td class="center" id="cell14">
+                            <input type="text" maxlength="1" name="ef14" id="c14-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell15">
+                            <input type="text" maxlength="1" name="ef15" id="c15-e" autocomplete="off" disabled value="9">
+                        </td>
+                        <td class="edgeLeft" id="cell16">
+                            <input type="text" maxlength="1" name="ef16" id="c16-b" autocomplete="off">
+                        </td>
+                        <td class="center" id="cell17">
+                            <input type="text" maxlength="1" name="ef17" id="c17-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell18">
+                            <input type="text" maxlength="1" name="ef18" id="c18-b" autocomplete="off">
+                        </td>
                     </tr>
                     <tr id="thirdRow">
-                        <td class="cornerLeftBottom" id="cell20">1</td>
-                        <td class="edgeBottom" id="cell21">2</td>
-                        <td class="cornerRightBottom" id="cell22">3</td>
-                        <td class="cornerLeftBottom" id="cell23">4</td>
-                        <td class="edgeBottom" id="cell24">5</td>
-                        <td class="cornerRightBottom" id="cell25">6</td>
-                        <td class="cornerLeftBottom" id="cell26">7</td>
-                        <td class="edgeBottom" id="cell27">8</td>
-                        <td class="cornerRightBottom" id="cell28">9</td>
+                        <td class="cornerLeftBottom" id="cell20">
+                            <input type="text" maxlength="1" name="ef20" id="c20-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell21">
+                            <input type="text" maxlength="1" name="ef21" id="c21-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightBottom" id="cell22">
+                            <input type="text" maxlength="1" name="ef22" id="c22-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftBottom" id="cell23">
+                            <input type="text" maxlength="1" name="ef23" id="c23-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell24">
+                            <input type="text" maxlength="1" name="ef24" id="c24-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightBottom" id="cell25">
+                            <input type="text" maxlength="1" name="ef25" id="c25-e" autocomplete="off" disabled value="3">
+                        </td>
+                        <td class="cornerLeftBottom" id="cell26">
+                            <input type="text" maxlength="1" name="ef26" id="c26-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell27">
+                            <input type="text" maxlength="1" name="ef27" id="c27-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightBottom" id="cell28">
+                            <input type="text" maxlength="1" name="ef28" id="c28-b" autocomplete="off">
+                        </td>
                     </tr>
                     <tr id="fourthRow">
-                        <td class="cornerLeftTop" id="cell30">1</td>
-                        <td class="edgeTop" id="cell31">2</td>
-                        <td class="cornerRightTop" id="cell32">3</td>
-                        <td class="cornerLeftTop" id="cell33">4</td>
-                        <td class="edgeTop" id="cell34">5</td>
-                        <td class="cornerRightTop" id="cell35">6</td>
-                        <td class="cornerLeftTop" id="cell36">7</td>
-                        <td class="edgeTop" id="cell37">8</td>
-                        <td class="cornerRightTop" id="cell38">9</td>
+                        <td class="cornerLeftTop" id="cell30">
+                            <input type="text" maxlength="1" name="ef30" id="c30-e" autocomplete="off" disabled value="1">
+                        </td>
+                        <td class="edgeTop" id="cell31">
+                            <input type="text" maxlength="1" name="ef31" id="c31-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightTop" id="cell32">
+                            <input type="text" maxlength="1" name="ef32" id="c32-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftTop" id="cell33">
+                            <input type="text" maxlength="1" name="ef33" id="c33-e" autocomplete="off" disabled value="5">
+                        </td>
+                        <td class="edgeTop" id="cell34">
+                            <input type="text" maxlength="1" name="ef34" id="c34-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightTop" id="cell35">
+                            <input type="text" maxlength="1" name="ef35" id="c35-e" autocomplete="off" disabled value="8">
+                        </td>
+                        <td class="cornerLeftTop" id="cell36">
+                            <input type="text" maxlength="1" name="ef36" id="c36-e" autocomplete="off" disabled value="3">
+                        </td>
+                        <td class="edgeTop" id="cell37">
+                            <input type="text" maxlength="1" name="ef37" id="c37-e" autocomplete="off" disabled value="2">
+                        </td>
+                        <td class="cornerRightTop" id="cell38">
+                            <input type="text" maxlength="1" name="ef38" id="c38-b" autocomplete="off">
+                        </td>
                     </tr>
                     <tr id="fifthRow">
-                        <td class="edgeLeft" id="cell40">1</td>
-                        <td class="center" id="cell41">2</td>
-                        <td class="edgeRight" id="cell42">3</td>
-                        <td class="edgeLeft" id="cell43">4</td>
-                        <td class="center" id="cell44">5</td>
-                        <td class="edgeRight" id="cell45">6</td>
-                        <td class="edgeLeft" id="cell46">7</td>
-                        <td class="center" id="cell47">8</td>
-                        <td class="edgeRight" id="cell148">9</td>
+                        <td class="edgeLeft" id="cell40">
+                            <input type="text" maxlength="1" name="ef40" id="c40-e" autocomplete="off" disabled value="3">
+                        </td>
+                        <td class="center" id="cell41">
+                            <input type="text" maxlength="1" name="ef41" id="c42-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell42">
+                            <input type="text" maxlength="1" name="ef43" id="c43-b" autocomplete="off">
+                        </td>
+                        <td class="edgeLeft" id="cell43">
+                            <input type="text" maxlength="1" name="ef44" id="c44-b" autocomplete="off">
+                        </td>
+                        <td class="center" id="cell44">
+                            <input type="text" maxlength="1" name="ef45" id="c45-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell45">
+                            <input type="text" maxlength="1" name="ef46" id="c46-b" autocomplete="off">
+                        </td>
+                        <td class="edgeLeft" id="cell46">
+                            <input type="text" maxlength="1" name="ef47" id="c47-b" autocomplete="off">
+                        </td>
+                        <td class="center" id="cell47">
+                            <input type="text" maxlength="1" name="ef48" id="c48-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell148">
+                            <input type="text" maxlength="1" name="ef49" id="c49-e" autocomplete="off" disabled value="7">
+                        </td>
                     </tr>
                     <tr id="sixthRow">
-                        <td class="cornerLeftBottom" id="cell50">1</td>
-                        <td class="edgeBottom" id="cell51">2</td>
-                        <td class="cornerRightBottom" id="cell52">3</td>
-                        <td class="cornerLeftBottom" id="cell53">4</td>
-                        <td class="edgeBottom" id="cell54">5</td>
-                        <td class="cornerRightBottom" id="cell55">6</td>
-                        <td class="cornerLeftBottom" id="cell56">7</td>
-                        <td class="edgeBottom" id="cell57">8</td>
-                        <td class="cornerRightBottom" id="cell58">9</td>
+                        <td class="cornerLeftBottom" id="cell50">
+                            <input type="text" maxlength="1" name="ef50" id="c50-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell51">
+                            <input type="text" maxlength="1" name="ef51" id="c51-e" autocomplete="off" disabled value="9">
+                        </td>
+                        <td class="cornerRightBottom" id="cell52">
+                            <input type="text" maxlength="1" name="ef52" id="c52-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftBottom" id="cell53">
+                            <input type="text" maxlength="1" name="ef53" id="c53-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell54">
+                            <input type="text" maxlength="1" name="ef54" id="c54-e" autocomplete="off" disabled value="3">
+                        </td>
+                        <td class="cornerRightBottom" id="cell55">
+                            <input type="text" maxlength="1" name="ef55" id="c55-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftBottom" id="cell56">
+                            <input type="text" maxlength="1" name="ef56" id="c56-e" autocomplete="off" disabled value="6">
+                        </td>
+                        <td class="edgeBottom" id="cell57">
+                            <input type="text" maxlength="1" name="ef57" id="c57-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightBottom" id="cell58">
+                            <input type="text" maxlength="1" name="ef58" id="c58-e" autocomplete="off" disabled value="5">
+                        </td>
                     </tr>
                     <tr id="seventhRow">
-                        <td class="cornerLeftTop" id="cell60">1</td>
-                        <td class="edgeTop" id="cell61">2</td>
-                        <td class="cornerRightTop" id="cell62">3</td>
-                        <td class="cornerLeftTop" id="cell63">4</td>
-                        <td class="edgeTop" id="cell64">5</td>
-                        <td class="cornerRightTop" id="cell65">6</td>
-                        <td class="cornerLeftTop" id="cell66">7</td>
-                        <td class="edgeTop" id="cell67">8</td>
-                        <td class="cornerRightTop" id="cell68">9</td>
+                        <td class="cornerLeftTop" id="cell60">
+                            <input type="text" maxlength="1" name="ef60" id="c60-e" autocomplete="off" disabled value="8">
+                        </td>
+                        <td class="edgeTop" id="cell61">
+                            <input type="text" maxlength="1" name="ef61" id="c61-e" autocomplete="off" disabled value="6">
+                        </td>
+                        <td class="cornerRightTop" id="cell62">
+                            <input type="text" maxlength="1" name="ef62" id="c62-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftTop" id="cell63">
+                            <input type="text" maxlength="1" name="ef63" id="c63-b" autocomplete="off">
+                        </td>
+                        <td class="edgeTop" id="cell64">
+                            <input type="text" maxlength="1" name="ef64" id="c64-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightTop" id="cell65">
+                            <input type="text" maxlength="1" name="ef65" id="c65-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftTop" id="cell66">
+                            <input type="text" maxlength="1" name="ef66" id="c66-b" autocomplete="off">
+                        </td>
+                        <td class="edgeTop" id="cell67">
+                            <input type="text" maxlength="1" name="ef67" id="c67-e" autocomplete="off" disabled value="5">
+                        </td>
+                        <td class="cornerRightTop" id="cell68">
+                            <input type="text" maxlength="1" name="ef68" id="c68-e" autocomplete="off" disabled value="4">
+                        </td>
                     </tr>
                     <tr id="eighthRow">
-                        <td class="edgeLeft" id="cell70">1</td>
-                        <td class="center" id="cell71">2</td>
-                        <td class="edgeRight" id="cell72">3</td>
-                        <td class="edgeLeft" id="cell73">4</td>
-                        <td class="center" id="cell74">5</td>
-                        <td class="edgeRight" id="cell75">6</td>
-                        <td class="edgeLeft" id="cell76">7</td>
-                        <td class="center" id="cell77">8</td>
-                        <td class="edgeRight" id="cell78">9</td>
+                        <td class="edgeLeft" id="cell70">
+                            <input type="text" maxlength="1" name="ef70" id="c70-e" autocomplete="off" disabled value="5">
+                        </td>
+                        <td class="center" id="cell71">
+                            <input type="text" maxlength="1" name="ef71" id="c71-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell72">
+                            <input type="text" maxlength="1" name="ef72" id="c72-b" autocomplete="off">
+                        </td>
+                        <td class="edgeLeft" id="cell73">
+                            <input type="text" maxlength="1" name="ef73" id="c73-e" autocomplete="off" disabled value="8">
+                        </td>
+                        <td class="center" id="cell74">
+                            <input type="text" maxlength="1" name="ef74" id="c74-e" autocomplete="off" disabled value="9">
+                        </td>
+                        <td class="edgeRight" id="cell75">
+                            <input type="text" maxlength="1" name="ef75" id="c75-b" autocomplete="off">
+                        </td>
+                        <td class="edgeLeft" id="cell76">
+                            <input type="text" maxlength="1" name="ef76" id="c76-b" autocomplete="off">
+                        </td>
+                        <td class="center" id="cell77">
+                            <input type="text" maxlength="1" name="ef77" id="c77-b" autocomplete="off">
+                        </td>
+                        <td class="edgeRight" id="cell78">
+                            <input type="text" maxlength="1" name="ef78" id="c78-b" autocomplete="off">
+                        </td>
                     </tr>
                     <tr id="ninthRow">
-                        <td class="cornerLeftBottom" id="cell80">1</td>
-                        <td class="edgeBottom" id="cell81">2</td>
-                        <td class="cornerRightBottom" id="cell82">3</td>
-                        <td class="cornerLeftBottom" id="cell83">4</td>
-                        <td class="edgeBottom" id="cell84">5</td>
-                        <td class="cornerRightBottom" id="cell85">6</td>
-                        <td class="cornerLeftBottom" id="cell86">7</td>
-                        <td class="edgeBottom" id="cell87">8</td>
-                        <td class="cornerRightBottom" id="cell88">9</td>
+                        <td class="cornerLeftBottom" id="cell80">
+                            <input type="text" maxlength="1" name="ef80" id="c80-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell81">
+                            <input type="text" maxlength="1" name="ef81" id="c81-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightBottom" id="cell82">
+                            <input type="text" maxlength="1" name="ef82" id="c82-b" autocomplete="off">
+                        </td>
+                        <td class="cornerLeftBottom" id="cell83">
+                            <input type="text" maxlength="1" name="ef83" id="c83-b" autocomplete="off">
+                        </td>
+                        <td class="edgeBottom" id="cell84">
+                            <input type="text" maxlength="1" name="ef84" id="c84-e" autocomplete="off" disabled value="5">
+                        </td>
+                        <td class="cornerRightBottom" id="cell85">
+                            <input type="text" maxlength="1" name="ef85" id="c85-e" autocomplete="off" disabled value="4">
+                        </td>
+                        <td class="cornerLeftBottom" id="cell86">
+                            <input type="text" maxlength="1" name="ef86" id="c86-e" autocomplete="off" disabled value="7">
+                        </td>
+                        <td class="edgeBottom" id="cell87">
+                            <input type="text" maxlength="1" name="ef87" id="c87-b" autocomplete="off">
+                        </td>
+                        <td class="cornerRightBottom" id="cell88">
+                            <input type="text" maxlength="1" name="ef88" id="c88-e" autocomplete="off" disabled value="8">
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -140,6 +303,6 @@
     </div>
 
     </div>
-
+    <script src="index.js"></script>
 </body>
 </html>
