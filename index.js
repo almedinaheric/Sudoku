@@ -45,9 +45,11 @@ function AddOnClick() {
     }
 }
 
-//the input function via the keypad
+//the input function via the keypad (if inputted via the keyboard,
+//it will say "invalid" but the input will go through)
 function Input(value) {
     if (!ValidInput(selectedX, selectedY, value)) {
+        selectedField.firstElementChild.value="";
         return;
     }
     selectedField.firstElementChild.value = value;
@@ -59,46 +61,45 @@ function ValidInput(x, y, n) {
     for (let i = 0; i < 9; i++) {
         if (allFields[x][i].firstElementChild.value != "") {
             if (allFields[x][i].firstElementChild.value == n) {
-                alert("Invalid");
+                console.log("Invalid");
+                //alert("Invalid");
                 return false;
             }
         }
         if (allFields[i][y].firstElementChild.value != "") {
             if (allFields[i][y].firstElementChild.value == n) {
-                alert("Invalid");
+                console.log("Invalid");
+                //alert("Invalid");
                 return false;
             }
         }
+
     }
-    // for (let i = 0; i < 9; i++)
-    // {
-    //     if(allFields[x][i].firstElementChild.value=="")
-    //     {
-    //         continue;
-    //     }
-    //     console.log(allFields[x][i].firstElementChild.value+",   "+n);
-    //     if (allFields[x][i].firstElementChild.value == n)
-    //     {
-    //         alert("Invalid");
-    //         return false;
-    //     }
-    // }
-    // for (let i = 0; i < 9; i++)
-    // {
-    //     if(allFields[i][y].firstElementChild.value=="")
-    //     {
-    //         continue;
-    //     }
-    //     console.log(allFields[x][i].firstElementChild.value+",   "+n);
-    //     if (allFields[i][y].firstElementChild.value == n)
-    //     {
-    //         alert("Invalid");
-    //         return false;
-    //     }
-    // }
     return true;
 }
-
+//both the "onkeydown" and "onkeyup" functions are my attempt at fixing the input via the keyboard
+document.onkeydown=function(e){
+    console.log("Pressed "+e.key+" "+e.keyCode);
+    if(e.keyCode>48 && e.keyCode<58)
+    {
+        Input(e.keyCode-48);
+    }
+    else
+    {
+        selectedField.firstElementChild.value="";
+    }
+}
+document.onkeyup=function()
+{
+    if(parseInt(selectedField.firstElementChild.value)>0 && parseInt(selectedField.firstElementChild.value)<9)
+    {
+        console.log("log");
+    }
+    else
+    {
+        selectedField.firstElementChild.value="";
+    }
+}
 //Adding onload events 
 window.addEventListener('load', () => {
     allFields = Initialize();
