@@ -1,6 +1,6 @@
 //kada se klikne na celiju postaviti background na var(--selected-cell)
 //kada se klikne na celiju background tog reda i kolone postaviti na var(--column-row)
-//kada se klikne na celiju oznaciti sve ostale celije koje imaju  isti broj sa var(--selected-cell)
+//kada se klikne na celiju oznaciti sve ostale celije koje imaju isti broj sa var(--selected-cell)
 //ako je pogresan broj color postaviti na var(--incorrect-number-color)
 //kada se rijesi jedan red/kolona/kvadrat disable-ati taj red/kolonu/kvadrat
 
@@ -36,7 +36,13 @@ function AddOnClick() {
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             allFields[i][j].onclick = function () {
+                if(selectedField!=null)
+                {
+                    selectedField.style.backgroundColor="white";
+                }
                 selectedField = this;
+                selectedField.style.backgroundColor="rgb(0, 114, 227,0.5)";
+                //selectedField.style.setProperty();
                 selectedX = i;
                 selectedY = j;
                 console.log("Clicked me! Row: " + i + " and column: " + j);
@@ -49,8 +55,11 @@ function AddOnClick() {
 //it will say "invalid" but the input will go through)
 function Input(value) {
     if (!ValidInput(selectedX, selectedY, value)) {
-        selectedField.firstElementChild.value="";
-        return;
+        selectedField.style.backgroundColor="#c22020";
+    }
+    else
+    {
+        selectedField.style.backgroundColor="white";
     }
     selectedField.firstElementChild.value = value;
     console.log(value);
@@ -73,34 +82,39 @@ function ValidInput(x, y, n) {
                 return false;
             }
         }
-
+        //need to implement the condition to see if it is duplicating a number within its 3x3 area
     }
     return true;
 }
+
 //both the "onkeydown" and "onkeyup" functions are my attempt at fixing the input via the keyboard
-document.onkeydown=function(e){
-    console.log("Pressed "+e.key+" "+e.keyCode);
-    if(e.keyCode>48 && e.keyCode<58)
-    {
-        Input(e.keyCode-48);
-    }
-    else
-    {
-        selectedField.firstElementChild.value="";
-    }
-}
-document.onkeyup=function()
+document.onkeydown=function(e)
 {
-    if(parseInt(selectedField.firstElementChild.value)>0 && parseInt(selectedField.firstElementChild.value)<9)
-    {
-        console.log("log");
-    }
-    else
+    console.log(e.key);
+    e.preventDefault();
+    if(e.key=="Backspace")
     {
         selectedField.firstElementChild.value="";
     }
+    if(e.keyCode-48>0 && e.keyCode-48<10)
+    {
+        console.log(e.keyCode);
+        Input(e.keyCode-48);
+    }   
 }
+// document.onkeyup=function()
+// {
+//     if(parseInt(selectedField.firstElementChild.value)>0 && parseInt(selectedField.firstElementChild.value)<9)
+//     {
+//         console.log("log");
+//     }
+//     else
+//     {
+//         selectedField.firstElementChild.value="";
+//     }
+// }
 //Adding onload events 
+
 window.addEventListener('load', () => {
     allFields = Initialize();
     AddOnClick();
